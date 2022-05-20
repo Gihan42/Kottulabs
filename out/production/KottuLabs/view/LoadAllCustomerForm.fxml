@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadAllCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="374.0" layoutX="13.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="579.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e4e0e0" />
+                  <Stop color="#db99d2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TableView fx:id="tblCustomer" layoutX="21.0" layoutY="96.0" prefHeight="276.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="colCusId" prefWidth="143.66665649414062" text="Customer Id" />
+            <TableColumn fx:id="colCusName" prefWidth="143.66665649414062" text="Customer Name" />
+            <TableColumn fx:id="colCusAddress" prefWidth="143.66665649414062" text="Customer Address" />
+            <TableColumn fx:id="colCusContact" prefWidth="131.0" text="Customer Phone No" />
+        </columns>
+      </TableView>
+      <Label layoutX="160.0" layoutY="14.0" prefHeight="30.0" prefWidth="304.0" text="Load All Customer's Details">
+         <font>
+            <Font name="Bell MT" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="129.0" layoutY="44.0" prefHeight="3.0" prefWidth="347.0" />
+   </children>
+</AnchorPane>

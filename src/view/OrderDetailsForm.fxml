@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="464.0" prefWidth="760.0" style="-fx-background-color: #d2cbcb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="464.0" stroke="BLACK" strokeType="INSIDE" width="774.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1f829a" />
+                  <Stop color="#d2cbcb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="302.0" layoutY="14.0" prefHeight="48.0" prefWidth="181.0" text="Order  Details">
+         <font>
+            <Font name="Gabriola" size="38.0" />
+         </font>
+      </Label>
+      <Separator layoutX="197.0" layoutY="61.0" prefHeight="4.0" prefWidth="381.0" style="-fx-background-color: black;" />
+      <TableView fx:id="tblOrderDetails" layoutX="9.0" layoutY="114.0" prefHeight="314.0" prefWidth="748.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <columns>
+            <TableColumn fx:id="colCId" prefWidth="155.33331298828125" text="customer id" />
+            <TableColumn fx:id="colMId" prefWidth="143.66668701171875" text="meal id" />
+            <TableColumn fx:id="colQty" prefWidth="153.33334350585938" text="qty" />
+            <TableColumn fx:id="colDate" prefWidth="154.6666259765625" text="date" />
+            <TableColumn fx:id="colTime" prefWidth="135.0" text="time" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="35.0" fitWidth="95.0" layoutX="260.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/external-refresh-folder-tanah-basah-glyph-tanah-basah.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

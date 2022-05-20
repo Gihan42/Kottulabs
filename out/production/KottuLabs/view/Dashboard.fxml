@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoardContext" prefHeight="435.0" prefWidth="563.0" style="-fx-background-color: white; -fx-border-color: BLACK;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <ImageView fitHeight="435.0" fitWidth="590.0" pickOnBounds="true">
+         <image>
+            <Image url="@../accest/wepik-2022115-201215.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="btnMenu" layoutX="107.0" layoutY="37.0" mnemonicParsing="false" onAction="#slideMenuOnAction" opacity="0.0" prefHeight="38.0" prefWidth="46.0" style="-fx-border-color: #dfdbdb;" text="♾" textFill="#141414">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="111.0" layoutY="233.0" mnemonicParsing="false" onAction="#AdminOnAction" prefHeight="46.0" prefWidth="139.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #CDCDD9;" text="Admin">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="111.0" layoutY="178.0" mnemonicParsing="false" onAction="#CashierOnAction" prefHeight="46.0" prefWidth="139.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #CDCDD9;" text="Cashier">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="111.0" layoutY="286.0" mnemonicParsing="false" onAction="#MenuOnAction" prefHeight="46.0" prefWidth="139.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #CDCDD9;" text="Menu">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

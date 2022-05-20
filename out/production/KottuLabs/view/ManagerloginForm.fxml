@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerloginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152f48" height="616.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="267.0" />
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/854878.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/3059997.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/4213179.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/2875435.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="21.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/2504957.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblAddress" layoutX="62.0" layoutY="168.0" text="196/Galle Road ,Weligama" textFill="#f8f3f3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="234.0" text="https://www.kottulabs/search " textFill="#6393c7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContact" layoutX="76.0" layoutY="299.0" text="041-456789 / 041-567456" textFill="#f8f3f3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" layoutX="70.0" layoutY="358.0" text="kottulabs20@gmail.com" textFill="#f8f3f3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWhatsApp" layoutX="69.0" layoutY="422.0" prefHeight="20.0" prefWidth="126.0" text="+941-779090672" textFill="#f8f3f3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="6.0" layoutY="507.0" prefHeight="3.0" prefWidth="251.0" />
+      <Separator layoutX="34.0" layoutY="517.0" prefHeight="3.0" prefWidth="202.0" />
+      <Separator layoutX="56.0" layoutY="527.0" prefHeight="3.0" prefWidth="152.0" />
+      <Label layoutX="66.0" prefHeight="68.0" prefWidth="131.0" text="Kottu" textFill="#fff6f6">
+         <font>
+            <Font name="MT Extra" size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="65.0" text="Labs..." textFill="#fdfcfc">
+         <font>
+            <Font name="MS Outlook" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="57.0" layoutX="50.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/6512474.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnlogin" layoutX="379.0" layoutY="368.0" mnemonicParsing="false" onAction="#loginOnaction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 30; -fx-border-color: #152f48; -fx-border-radius: 30;" text="LOGIN" textFill="#152f48">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="345.0" layoutY="188.0" text="User Name" textFill="#152f48">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="252.0" text="Password" textFill="#152f48">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUserName" layoutX="349.0" layoutY="216.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="346.0" promptText="Admin">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXPasswordField fx:id="pwdPassword" layoutX="349.0" layoutY="284.0" onAction="#EnterOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="346.0" promptText="*********">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXPasswordField>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="500.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/4531275.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="429.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/6886723.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="575.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/5587225.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="406.0" layoutY="48.0" text="Admin Login Form" textFill="#152f48">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="371.0" layoutY="86.0" prefHeight="3.0" prefWidth="300.0" />
+      <Label layoutX="360.0" layoutY="467.0" text="New Kottu Labs login form  :" textFill="#161616">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="552.0" layoutY="469.0" text="kottuLabs pvt.Ltd" textFill="#152f48">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="546.0" layoutY="481.0" prefHeight="15.0" prefWidth="107.0" />
+      <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="724.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/circled-left-2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="724.0" layoutY="20.0" mnemonicParsing="false" onAction="#backToHomeOnAction" opacity="0.0" prefHeight="53.0" prefWidth="38.0" style="-fx-background-radius: 30; -fx-border-color: #410a3d; -fx-border-radius: 30;" text="back" textFill="#410a3d">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CheckBox fx:id="checkBtnShowpw" layoutX="345.0" layoutY="319.0" mnemonicParsing="false" onAction="#ShowPasswordOnAction" text="Show Password">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+      <JFXTextField fx:id="TxtShowPw" layoutX="353.0" layoutY="284.0" prefHeight="25.0" prefWidth="346.0" visible="false" />
+      <Button fx:id="btnLogout" layoutX="544.0" layoutY="368.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 30; -fx-border-color: #152f48; -fx-border-radius: 30; -fx-background-color: #ff9933;" text="LOGOUT" textFill="#152f48">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

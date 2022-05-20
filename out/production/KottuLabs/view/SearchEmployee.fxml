@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchEmployeeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="383.0" layoutX="8.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="583.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e4e0e0" />
+                  <Stop color="#2c72ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="200.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" text="Search Employee">
+         <font>
+            <Font name="Bell MT" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="169.0" layoutY="49.0" prefHeight="3.0" prefWidth="299.0" />
+      <JFXTextField fx:id="txtSearchEmployeeid" focusColor="#090909" layoutX="38.0" layoutY="94.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="280.0" promptText="Search Emplyee  NIC" unFocusColor="#1d1c1c">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeName" focusColor="#090909" layoutX="38.0" layoutY="152.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="280.0" promptText="Search Employee Name" unFocusColor="#1d1c1c">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeAddress" focusColor="#090909" layoutX="38.0" layoutY="209.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="280.0" promptText="Search Employee Address" unFocusColor="#1d1c1c">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeePhoneNo" focusColor="#090909" layoutX="38.0" layoutY="262.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="280.0" promptText="Search Employee Phone No :-" unFocusColor="#1d1c1c">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <Button fx:id="btnSearch" layoutX="396.0" layoutY="191.0" mnemonicParsing="false" onAction="#SearchOnAction" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: #400a3d; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="Search">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXTextField fx:id="txtEmployeeSalary" focusColor="#090909" layoutX="38.0" layoutY="312.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="280.0" promptText="Search Employee Salary" unFocusColor="#1d1c1c">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainLoginContext" prefHeight="476.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainLoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" layoutX="5.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" width="440.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1e314e" />
+                  <Stop color="#59c0e9" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Circle layoutX="224.0" layoutY="235.0" radius="190.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="0.5333332970028832" endY="1.0" startX="0.5079364958263579" startY="1.0">
+               <stops>
+                  <Stop color="#3b3a3a" />
+                  <Stop color="#4e4c4c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <ImageView fitHeight="462.0" fitWidth="440.0" layoutX="5.0" layoutY="-1.0" opacity="0.08" pickOnBounds="true">
+         <image>
+            <Image url="@../accest/ox-ox-corp.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="108.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/6512474.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="64.0" prefHeight="59.0" prefWidth="157.0" text="MEMBER  LOGIN" textFill="#cecece">
+         <font>
+            <Font name="PT Bold Dusky" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="92.0" layoutY="160.0" onKeyReleased="#textFields_Key_Released" opacity="0.67" prefHeight="50.0" prefWidth="277.0" style="-fx-background-color: #b0aaaa; -fx-background-radius: 30; -fx-border-radius: 30;" text="User Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <ImageView fitHeight="50.0" fitWidth="42.0" layoutX="50.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/external-user-ecommerce-solid-kendis-lasman.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="42.0" layoutX="50.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/icons8-password-30.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnlogin" layoutX="255.0" layoutY="327.0" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="129.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #db66ff;" text="Login" textFill="#031a43">
+         <font>
+            <Font name="Microsoft Uighur" size="40.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="pwdPassword" layoutX="98.0" layoutY="234.0" onAction="#EnterOnAction" onKeyReleased="#textFields_Key_Released" opacity="0.76" prefHeight="50.0" prefWidth="277.0" style="-fx-background-radius: 30; -fx-background-color: #bfbaba; -fx-border-radius: 30;" text="Password">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <CheckBox fx:id="chkShowPassword" layoutX="108.0" layoutY="300.0" mnemonicParsing="false" onAction="#ShowPasswordOnAction" prefHeight="27.0" prefWidth="157.0" text="Show Password" textFill="#b3a7a7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Separator layoutX="124.0" layoutY="109.0" prefWidth="200.0" />
+      <Separator layoutX="139.0" layoutY="121.0" prefHeight="3.0" prefWidth="167.0" />
+      <TextField fx:id="txtShowPassword" layoutX="98.0" layoutY="234.0" opacity="0.67" prefHeight="50.0" prefWidth="277.0" style="-fx-background-color: #b0aaaa; -fx-background-radius: 30;" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="157.0" layoutY="-5.0" prefHeight="59.0" prefWidth="167.0" text="KOTTU LABS" textFill="#0d0d0d">
+         <font>
+            <Font name="Chiller" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

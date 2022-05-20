@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminContext" prefHeight="582.0" prefWidth="1106.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="BLACK" strokeType="INSIDE" width="1106.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0e2f4e" />
+                  <Stop color="#100f0f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Button fx:id="btnSaveCustomer" layoutX="475.0" layoutY="31.0" mnemonicParsing="false" onAction="#LoadALLCustomerOnAction" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: #0C1B29;" text="Load All Customer" textFill="#fdfafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblTitle" disable="true" layoutX="425.0" layoutY="601.0" prefHeight="17.0" prefWidth="150.0" text="Load All Customer">
+         <font>
+            <Font name="Harlow Solid Italic" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="tableViewContext" layoutX="116.0" layoutY="317.0" prefHeight="258.0" prefWidth="768.0">
+         <children>
+            <AnchorPane fx:id="imageContext" layoutX="5.0" layoutY="8.0" prefHeight="266.0" prefWidth="756.0" style="-fx-background-color: white;" />
+            <TableView fx:id="tblMealTable" layoutX="2.0" layoutY="14.0" prefHeight="246.0" prefWidth="756.0" visible="false">
+              <columns>
+                <TableColumn fx:id="colmId" prefWidth="143.00003051757812" text="Id" />
+                  <TableColumn fx:id="colMname" prefWidth="201.0" text="Name" />
+                  <TableColumn fx:id="colDescription" prefWidth="215.0" text="Description" />
+                  <TableColumn fx:id="colMUnitPrice" prefWidth="215.0" text="Price (LKR)" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblEmployeeTable" layoutX="-9.0" layoutY="9.0" prefHeight="266.0" prefWidth="768.0" style="-fx-background-color: white;" visible="false">
+              <columns>
+                <TableColumn fx:id="colEid" prefWidth="151.66668701171875" text="Id" />
+                  <TableColumn fx:id="colEname" prefWidth="119.0" text="Name" />
+                  <TableColumn fx:id="colEaddress" prefWidth="171.0" text="Address" />
+                  <TableColumn fx:id="colContact" prefWidth="161.0" text="Contact No" />
+                  <TableColumn fx:id="colEsalary11" prefWidth="150.66668701171875" text="Salary" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </TableView>
+            <TableView fx:id="tblCustomer" layoutX="10.0" layoutY="18.0" prefHeight="266.0" prefWidth="756.0">
+               <columns>
+                  <TableColumn fx:id="colCusId" prefWidth="189.66668701171875" text="NIC" />
+                  <TableColumn fx:id="colCusName" prefWidth="189.66668701171875" text="Customer Name" />
+                  <TableColumn fx:id="colCusAddress" prefWidth="189.66668701171875" text="Customer Address" />
+                  <TableColumn fx:id="colCusContact" prefWidth="189.66668701171875" text="Contact No" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnLoadAllEmployee" layoutX="703.0" layoutY="32.0" mnemonicParsing="false" onAction="#LoadAllEmployeeOnAction" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: #0D151E;" text="Load All Employes" textFill="#fdfafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="456.0" layoutY="41.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="0.0" />
+      <Separator layoutX="671.0" layoutY="42.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="6.0" />
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="399.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/circled-left-2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="385.0" layoutY="30.0" mnemonicParsing="false" onAction="#backToHomeOnAction" opacity="0.0" prefHeight="40.0" prefWidth="53.0" style="-fx-background-radius: 30; -fx-border-color: #410a3d; -fx-border-radius: 30;" text="back" textFill="#410a3d">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="39.0" fitWidth="31.0" layoutX="328.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/home.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="306.0" layoutY="30.0" mnemonicParsing="false" onAction="#HomeOnAction" opacity="0.0" prefHeight="40.0" prefWidth="53.0" style="-fx-background-radius: 30; -fx-border-color: #410a3d; -fx-border-radius: 30;" text="back" textFill="#410a3d">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="379.0" layoutY="42.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="6.0" />
+      <ImageView fitHeight="46.0" fitWidth="61.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/menu-rounded.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="15.0" layoutY="31.0" mnemonicParsing="false" onAction="#SlideOnAction" opacity="0.0" prefHeight="40.0" prefWidth="53.0" style="-fx-background-radius: 30; -fx-border-color: #410a3d; -fx-border-radius: 30;" text="back" textFill="#410a3d">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="41.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/4531275.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="41.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/6886723.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="41.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/5587225.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAddmeal" layoutX="918.0" layoutY="33.0" mnemonicParsing="false" onAction="#LoadmealOnAction" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: #0E1113;" text="Load All Meals" textFill="#fdfafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="896.0" layoutY="42.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="6.0" />
+      <Label layoutX="962.0" layoutY="319.0" prefHeight="39.0" prefWidth="118.0" text="Add Meals">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="962.0" layoutY="104.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="33.0" prefWidth="118.0" style="-fx-background-radius: 20; -fx-border-color: #410a3d; -fx-background-color: white; -fx-border-radius: 20;" text="Refesh">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="964.0" layoutY="392.0" mnemonicParsing="false" onAction="#SaveMealOnAction" prefHeight="33.0" prefWidth="127.0" style="-fx-background-color: white; -fx-border-color: #410a3d; -fx-border-radius: 20;" text="Add Meals">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="968.0" layoutY="465.0" mnemonicParsing="false" onAction="#UpdateMealOnAction" prefHeight="33.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: #410a3d; -fx-border-radius: 20;" text="Update Meal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="966.0" layoutY="545.0" mnemonicParsing="false" onAction="#DeleteMealOnAction" prefHeight="33.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: #410a3d; -fx-border-radius: 20;" text="Delete Meal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="924.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/ok--v3.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="924.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/approve-and-update--v2.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="924.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/delete--v2.gif" />
+         </image>
+      </ImageView>
+      <Separator layoutX="952.0" layoutY="357.0" prefHeight="3.0" prefWidth="137.0" />
+      <AnchorPane fx:id="mealcontext" layoutX="93.0" layoutY="72.0" prefHeight="254.0" prefWidth="860.0">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="71.0" prefHeight="166.0" prefWidth="831.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: gray;">
+               <children>
+                  <JFXTextField fx:id="txtDescription" editable="false" focusColor="#16438a" layoutX="153.0" layoutY="72.0" prefHeight="29.0" prefWidth="186.0" promptText="Description" unFocusColor="#1248d2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtUnitPrice" editable="false" focusColor="#16438a" layoutX="153.0" layoutY="119.0" prefHeight="25.0" prefWidth="186.0" promptText="Rs.00.00" unFocusColor="#16438a">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtmealName" editable="false" focusColor="#16438a" layoutX="155.0" layoutY="29.0" prefHeight="25.0" prefWidth="186.0" promptText="Meal Name" unFocusColor="#16438a">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Label layoutX="16.0" layoutY="33.0" text="Meal Name :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="122.0" text="Unit Price:-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="77.0" text="Description  :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="416.0" layoutY="84.0" mnemonicParsing="false" onAction="#searchOrderDetailsOnActon" prefHeight="27.0" prefWidth="176.0" style="-fx-background-radius: 20; -fx-border-color: #410a3d; -fx-background-color: white; -fx-border-radius: 20;" text="🔍 View Order Details">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="152.0" fitWidth="176.0" layoutX="653.0" layoutY="7.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../accest/gieoo4j4T.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" layoutX="26.0" layoutY="-10.0" stroke="#a89f9f" strokeType="INSIDE" width="161.0" />
+                  <Label layoutX="45.0" layoutY="-13.0" prefHeight="11.0" prefWidth="132.0" text="Search Meals" textFill="#084267">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtcateogory" editable="false" focusColor="#16438a" layoutX="485.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" promptText="Kottu" unFocusColor="#16438a">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Label layoutX="356.0" layoutY="33.0" text="Food Category :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtSearchmeals" layoutX="75.0" layoutY="14.0" onAction="#txtealsOnActon" onKeyReleased="#textFields_Key_Released_Meals" prefHeight="39.0" prefWidth="694.0" promptText="🔍 Serch Meals" style="-fx-background-radius: 20; -fx-border-color: #155088; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customerContext" layoutX="80.0" layoutY="87.0" prefHeight="237.0" prefWidth="854.0" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="76.0" prefHeight="159.0" prefWidth="824.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: gray;">
+               <children>
+                  <JFXTextField fx:id="txtCustomerID" editable="false" layoutX="153.0" layoutY="19.0" prefHeight="29.0" prefWidth="186.0" promptText="NIC" unFocusColor="#16438a">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtAddress" editable="false" focusColor="#16438a" layoutX="153.0" layoutY="72.0" prefHeight="29.0" prefWidth="186.0" promptText="No/ City, Village" unFocusColor="#1248d2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtContactNo" editable="false" focusColor="#16438a" layoutX="153.0" layoutY="119.0" prefHeight="25.0" prefWidth="186.0" promptText="+941-XXXXXXXX" unFocusColor="#16438a">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtCustomerName" editable="false" focusColor="#16438a" layoutX="479.0" layoutY="22.0" prefHeight="25.0" prefWidth="150.0" promptText="Customer Name" unFocusColor="#16438a">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Label layoutX="350.0" layoutY="25.0" text="Customer Name :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="122.0" text="Customer Contact :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="77.0" text="Customer Address :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="25.0" text="Customer NIC :-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="411.0" layoutY="88.0" mnemonicParsing="false" onAction="#searchOrderDetailsOnActon" prefHeight="27.0" prefWidth="176.0" style="-fx-background-radius: 20; -fx-border-color: #410a3d; -fx-background-color: white; -fx-border-radius: 20;" text="🔍 View Order Details">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="152.0" fitWidth="176.0" layoutX="653.0" layoutY="7.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../accest/restaurant-chef-cook-serving-food-3d-cartoon-vector-21789081.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" layoutX="26.0" layoutY="-10.0" stroke="#a89f9f" strokeType="INSIDE" width="161.0" />
+                  <Label layoutX="45.0" layoutY="-13.0" prefHeight="26.0" prefWidth="150.0" text="Customer Details" textFill="#084267">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtSearch" layoutX="32.0" layoutY="14.0" onAction="#txtseOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="39.0" prefWidth="721.0" promptText="🔍 Search Customer" style="-fx-background-radius: 20; -fx-border-color: #155088; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00070d" height="25.0" layoutX="717.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+            <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="710.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../accest/external-User-essential-collection-bearicons-glyph-bearicons.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="slideContext" layoutX="-7.0" prefHeight="631.0" prefWidth="212.0" style="-fx-background-color: white; -fx-border-color: #410a3d;" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="-2.0" stroke="#410a3d" strokeType="INSIDE" width="212.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0a2845" />
+                        <Stop color="#070106" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="10.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../accest/external-User-essential-collection-bearicons-glyph-bearicons.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblName" layoutX="61.0" layoutY="27.0" prefHeight="20.0" prefWidth="65.0" text="Gihan" textFill="#ebe8e8">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName1" layoutX="59.0" layoutY="40.0" prefHeight="20.0" prefWidth="99.0" text="Madushanaka" textFill="#f4efef">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="12.0" layoutY="152.0" prefHeight="3.0" prefWidth="176.0" />
+            <Separator layoutX="17.0" layoutY="211.0" prefHeight="3.0" prefWidth="176.0" />
+            <Separator layoutX="18.0" layoutY="269.0" prefHeight="3.0" prefWidth="176.0" />
+            <Separator layoutX="19.0" layoutY="329.0" prefHeight="3.0" prefWidth="176.0" />
+            <Separator layoutX="19.0" layoutY="389.0" prefHeight="3.0" prefWidth="176.0" />
+            <Separator layoutX="21.0" layoutY="450.0" prefHeight="3.0" prefWidth="176.0" />
+            <Button layoutX="22.0" layoutY="168.0" mnemonicParsing="false" onAction="#SaveEmployeeOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Save Emploee ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="22.0" layoutY="228.0" mnemonicParsing="false" onAction="#SearchEmployeeOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Search Employee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="22.0" layoutY="285.0" mnemonicParsing="false" onAction="#UpdateEmployeeOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Update Employee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="21.0" layoutY="349.0" mnemonicParsing="false" onAction="#DeleteEmployeeOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Delete Employee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="25.0" layoutY="410.0" mnemonicParsing="false" onAction="#SalaryManageOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Salary Manage">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="75.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../accest/shutdown.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLogout" layoutX="72.0" layoutY="525.0" mnemonicParsing="false" onAction="#LogOutOnAction" opacity="0.0" prefHeight="39.0" prefWidth="46.0" style="-fx-background-color: #ff9933; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Logout">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Separator layoutX="25.0" layoutY="505.0" prefHeight="3.0" prefWidth="176.0" />
+            <Button fx:id="btnIncome" layoutX="25.0" layoutY="465.0" mnemonicParsing="false" onAction="#IncomeOnAction" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #0a2845; -fx-border-radius: 20;" text="Income Report">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="74.0" layoutY="564.0" text="LogOut" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="89.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="105.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="82.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

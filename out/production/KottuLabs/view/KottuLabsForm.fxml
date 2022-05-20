@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="kottulabsContext" prefHeight="323.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KottuLabsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="323.0" stroke="WHITE" strokeType="INSIDE" width="472.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#6f3b7d" />
+                  <Stop color="#a16767" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <ImageView fitHeight="323.0" fitWidth="472.0" opacity="0.42" pickOnBounds="true">
+         <image>
+            <Image url="@../accest/ox-ox-corp.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="77.0" layoutX="93.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/6512474.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="126.0" prefHeight="96.0" prefWidth="208.0" text="KOTTU" textFill="#161616">
+         <font>
+            <Font name="Chiller" size="91.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="88.0" prefHeight="129.0" prefWidth="234.0" text="LABS...." textFill="#0d0d0d">
+         <font>
+            <Font name="Chiller" size="91.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progresProses" layoutX="93.0" layoutY="238.0" prefHeight="20.0" prefWidth="268.0" progress="0.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <Label layoutX="230.0" layoutY="265.0" prefHeight="26.0" prefWidth="93.0" text="Loading...." textFill="#fffbfb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPercentage" layoutX="179.0" layoutY="265.0" prefHeight="26.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

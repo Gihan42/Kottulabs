@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrderContext" prefHeight="574.0" prefWidth="1012.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="67.0" strokeType="INSIDE" width="1012.0">
+         <fill>
+            <LinearGradient endX="0.22539680117652527" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#0a2845" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke></Rectangle>
+      <Label layoutX="826.0" layoutY="7.0" text="Date :-" textFill="#fbf4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="825.0" layoutY="34.0" text="Time :-" textFill="#fbf4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="893.0" layoutY="7.0" prefHeight="27.0" prefWidth="106.0" text="2022-10-12" textFill="#fbf4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="886.0" layoutY="34.0" prefHeight="27.0" prefWidth="126.0" text="08:35 AM " textFill="#fbf4f4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblcart" layoutX="14.0" layoutY="227.0" prefHeight="280.0" prefWidth="979.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="136.33334350585938" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="160.66665649414062" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="179.33334350585938" text="Unit Price" />
+            <TableColumn fx:id="colqTY" prefWidth="141.33334350585938" text="QTY" />
+            <TableColumn fx:id="colToatl" prefWidth="150.0" text="Total Cost" />
+            <TableColumn fx:id="colbutton" prefWidth="87.3333740234375" text="XXXX" />
+            <TableColumn fx:id="colBalance" prefWidth="113.33331298828125" text="Balance" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="524.0" prefHeight="38.0" prefWidth="71.0" text="Total : " textFill="#1a4b7f">
+         <font>
+            <Font name="Gabriola" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbltToatal1" layoutX="117.0" layoutY="524.0" prefHeight="38.0" prefWidth="82.0" text="00">
+         <font>
+            <Font name="Gabriola" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="524.0" prefHeight="38.0" prefWidth="32.0" text="Rs." textFill="#1f1f1f">
+         <font>
+            <Font name="Gabriola" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/menu-rounded.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSlideBar" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#slideBarOnAction" opacity="0.03" prefHeight="54.0" prefWidth="55.0" style="-fx-background-color: #400a3d;" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <AnchorPane fx:id="totalContext" layoutX="210.0" layoutY="499.0" prefHeight="46.0" prefWidth="197.0" visible="false">
+         <children>
+            <Label layoutX="12.0" layoutY="25.0" prefHeight="38.0" prefWidth="71.0" text="Total : " textFill="#d71717">
+               <font>
+                  <Font name="Gabriola" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal2" layoutX="115.0" layoutY="25.0" prefHeight="38.0" prefWidth="82.0" text="00">
+               <font>
+                  <Font name="Gabriola" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="25.0" prefHeight="38.0" prefWidth="32.0" text="Rs." textFill="#1f1f1f">
+               <font>
+                  <Font name="Gabriola" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="cmbCustomerId" layoutX="14.0" layoutY="91.0" prefHeight="27.0" prefWidth="150.0" promptText="Customer Id" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-color: #400a3d; -fx-border-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="cmbMeals" layoutX="14.0" layoutY="142.0" prefHeight="27.0" prefWidth="150.0" promptText="Meals" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-color: #400a3d; -fx-border-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <JFXTextField fx:id="txrCustomerName" editable="false" layoutX="182.0" layoutY="92.0" prefHeight="25.0" prefWidth="150.0" promptText="Customer Name">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" editable="false" layoutX="384.0" layoutY="92.0" prefHeight="25.0" prefWidth="185.0" promptText="Address">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtCustomerPhoneNo" editable="false" layoutX="656.0" layoutY="92.0" prefHeight="25.0" prefWidth="185.0" promptText="Phone No">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtMName" editable="false" layoutX="182.0" layoutY="143.0" prefHeight="25.0" prefWidth="150.0" promptText="Meals Name">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtDescription" editable="false" layoutX="356.0" layoutY="144.0" prefHeight="25.0" prefWidth="116.0" promptText="Description">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtUPrice" editable="false" layoutX="500.0" layoutY="144.0" prefHeight="25.0" prefWidth="162.0" promptText="Unit Price (Rs.)">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <Separator layoutX="812.0" layoutY="137.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="6.0">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </Separator>
+      <AnchorPane fx:id="slideContext" layoutX="-4.0" prefHeight="617.0" prefWidth="220.0" style="-fx-background-color: white; -fx-border-color: #400a3d;" visible="false">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" height="121.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="220.0">
+            <fill>
+               <LinearGradient endX="0.2317460014706566" endY="0.3206348964146205" startX="0.8063491821289063" startY="0.1746031988234747">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="#0a2845" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill>
+         </Rectangle>
+         <Label layoutX="71.0" layoutY="27.0" prefHeight="33.0" prefWidth="82.0" text="KOTTU" textFill="#ede9e9">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Label layoutX="94.0" layoutY="51.0" text="Labs..." textFill="#f4efef">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <Separator layoutX="10.0" layoutY="227.0" prefHeight="3.0" prefWidth="176.0" />
+         <Separator layoutX="15.0" layoutY="286.0" prefHeight="3.0" prefWidth="176.0" />
+         <Separator layoutX="16.0" layoutY="344.0" prefHeight="3.0" prefWidth="176.0" />
+         <Separator layoutX="17.0" layoutY="404.0" prefHeight="3.0" prefWidth="176.0" />
+         <Separator layoutX="17.0" layoutY="464.0" prefHeight="3.0" prefWidth="176.0" />
+         <Separator layoutX="17.0" layoutY="525.0" prefHeight="3.0" prefWidth="176.0" />
+         <Button layoutX="28.0" layoutY="243.0" mnemonicParsing="false" onAction="#SaveCustomerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Save Customer">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button layoutX="28.0" layoutY="303.0" mnemonicParsing="false" onAction="#SearchCustomerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Search Customer">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button layoutX="28.0" layoutY="360.0" mnemonicParsing="false" onAction="#UpdateCustomerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Update Customer">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button layoutX="30.0" layoutY="424.0" mnemonicParsing="false" onAction="#DeleteCustomerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Delete Customer">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button layoutX="30.0" layoutY="485.0" mnemonicParsing="false" onAction="#LoadAllCustomerOnAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #400a3d; -fx-border-radius: 20;" text="Load All Customer">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="23.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="33.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+         <Label layoutX="65.0" layoutY="155.0" prefHeight="30.0" prefWidth="106.0" text="Customers" textFill="#400a3d">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="112.0" layoutY="171.0" prefHeight="30.0" prefWidth="59.0" text="Details" textFill="#400a3d">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Label>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="28.0" layoutY="535.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="38.0" layoutY="545.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="90.0" layoutY="537.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="100.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="157.0" layoutY="537.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="167.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+         <ImageView fitHeight="46.0" fitWidth="54.0" layoutX="44.0" layoutY="51.0" pickOnBounds="true">
+            <image>
+               <Image url="@../accest/6512474.png" />
+            </image>
+         </ImageView>
+      </AnchorPane>
+      <JFXTextField fx:id="txtQty" layoutX="681.0" layoutY="143.0" onAction="#txtQtyEnterOnAction" prefHeight="25.0" prefWidth="106.0" promptText="QTY">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <Button fx:id="btnAddToCart" layoutX="469.0" layoutY="522.0" mnemonicParsing="false" onAction="#AddToCartOnAction" prefHeight="38.0" prefWidth="379.0" style="-fx-border-color: #400a3d; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="Add To Cart">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="46.0" fitWidth="54.0" layoutX="412.0" layoutY="520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../accest/6512474.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="727.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/external-shop-public-service-photo3ideastudio-gradient-photo3ideastudio.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="723.0" layoutY="14.0" mnemonicParsing="false" onAction="#backtoDOnAction" opacity="0.0" prefHeight="38.0" prefWidth="46.0" text="home">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="630.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/enter-2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="624.0" layoutY="14.0" mnemonicParsing="false" onAction="#loginOnAction" opacity="0.0" prefHeight="46.0" prefWidth="46.0" text="login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="536.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/shutdown.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogOut" layoutX="529.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutOnAction" opacity="0.0" prefHeight="46.0" prefWidth="52.0" text="logout">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="724.0" layoutY="52.0" prefHeight="17.0" prefWidth="38.0" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="633.0" layoutY="52.0" prefHeight="17.0" prefWidth="46.0" text="LogIn" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="529.0" layoutY="49.0" prefHeight="17.0" prefWidth="52.0" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="269.0" layoutY="30.0" prefHeight="38.0" prefWidth="126.0" text="KOTTU  LABS...">
+         <font>
+            <Font name="Chiller" size="23.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#94ebff" />
+                  <Stop color="WHITE" offset="0.9974457215836527" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="257.0" layoutY="3.0" prefHeight="38.0" prefWidth="150.0" text="Welcome">
+         <font>
+            <Font name="Elephant" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXTextField fx:id="txtQtyOnHand" layoutX="859.0" layoutY="144.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer On Hand" unFocusColor="#030e12">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Button layoutX="848.0" layoutY="186.0" mnemonicParsing="false" onAction="#incomeOnAction" prefHeight="27.0" prefWidth="135.0" style="-fx-border-color: #400a3d; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="Income">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXTextField fx:id="txtbalance2" layoutX="857.0" layoutY="92.0" opacity="0.0" prefHeight="25.0" prefWidth="46.0" promptText="QTY">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Button fx:id="btnplaceOrder" layoutX="692.0" layoutY="187.0" mnemonicParsing="false" onAction="#placeOrderOnAction" prefHeight="31.0" prefWidth="135.0" style="-fx-border-color: #400a3d; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="Save Order">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblOrderd" layoutX="89.0" layoutY="187.0" prefHeight="32.0" prefWidth="99.0" />
+      <JFXCheckBox fx:id="cheDainIN" layoutX="339.0" layoutY="186.0" prefHeight="34.0" prefWidth="126.0" text="Daine In" unCheckedColor="#093f69">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#252060" />
+                  <Stop color="#484646" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="cheTakeAway" layoutX="489.0" layoutY="187.0" prefHeight="27.0" prefWidth="126.0" text="Takeaway" unCheckedColor="#093f69">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#252060" />
+                  <Stop color="#484646" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXCheckBox>
+      <Button layoutX="859.0" layoutY="527.0" mnemonicParsing="false" onAction="#printBilOnAction" prefHeight="27.0" prefWidth="135.0" style="-fx-border-color: #400a3d; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="Print bill">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="927.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/refresh--v2.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnplaceOrder1" layoutX="927.0" layoutY="79.0" mnemonicParsing="false" onAction="#RefreshOnAction" opacity="0.0" prefHeight="38.0" prefWidth="38.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" text="refresh">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="927.0" layoutY="117.0" prefHeight="17.0" prefWidth="46.0" text="Refresh" />
+      <Label layoutX="818.0" layoutY="144.0" prefHeight="25.0" prefWidth="32.0" text="Rs :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

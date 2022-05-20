@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="menucontext" prefHeight="492.0" prefWidth="1191.0" style="-fx-background-color: #33393C; -fx-border-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuFormController">
+   <children>
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="717.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/external-shop-public-service-photo3ideastudio-gradient-photo3ideastudio.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="713.0" layoutY="8.0" mnemonicParsing="false" onAction="#HomeOnAction" opacity="0.0" prefHeight="27.0" prefWidth="44.0" style="-fx-background-color: blue;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="440.0" layoutY="5.0" prefHeight="21.0" prefWidth="50.0" text="Date:-" textFill="#eee9e9">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="490.0" layoutY="5.0" prefHeight="14.0" prefWidth="102.0" text="2022-10-12" textFill="#fef9f9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="5.0" prefHeight="19.0" prefWidth="65.0" text="Time:-" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="323.0" layoutY="2.0" prefHeight="27.0" prefWidth="91.0" text="08:35 AM " textFill="#f0e9e9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbkottu" layoutX="249.0" layoutY="58.0" onAction="#KottuOnAction" prefWidth="150.0" style="-fx-background-color: #33393C; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="cmbFriedRice" layoutX="426.0" layoutY="58.0" onAction="#riceOnAction" prefWidth="150.0" style="-fx-background-color: #33393C; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="264.0" layoutY="61.0" prefHeight="21.0" prefWidth="91.0" text="Kottu Items" textFill="#fc980a">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="61.0" prefHeight="21.0" prefWidth="91.0" text="Fried Rice" textFill="#fc980a">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSoftDrink" layoutX="613.0" layoutY="58.0" onAction="#SoftDrinkOnAction" prefWidth="150.0" style="-fx-background-color: #33393C; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="626.0" layoutY="61.0" prefHeight="21.0" prefWidth="91.0" text="Soft Drink" textFill="#fc980a">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="489.0" prefWidth="234.0" style="-fx-border-color: white;">
+         <children>
+            <Button layoutX="42.0" layoutY="339.0" mnemonicParsing="false" onAction="#AddMealOnAction" prefHeight="37.0" prefWidth="151.0" style="-fx-background-color: #33393C; -fx-border-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" text="Add One" textFill="#e49400">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="100.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../accest/shutdown.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="95.0" layoutY="427.0" mnemonicParsing="false" onAction="#logoutOnAction" opacity="0.0" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: black;" text="logout" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="96.0" layoutY="445.0" prefHeight="37.0" prefWidth="65.0" text="logout" textFill="#f2eeee">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="47.0" prefHeight="46.0" prefWidth="179.0" text="KOTTU   LABS..." textFill="#fff9f9">
+               <font>
+                  <Font name="Chiller" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="46.0" prefHeight="28.0" prefWidth="80.0" text="MENU" textFill="#fc980a">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Separator layoutX="18.0" layoutY="73.0" prefWidth="200.0" />
+            <AnchorPane fx:id="kottuContext" layoutX="17.0" layoutY="125.0" prefHeight="162.0" prefWidth="200.0" style="-fx-background-color: #33393C;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="197.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../accest/depositphotos_115943092-stock-photo-sri-lankan-kottu-roti.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="softDrinkContext" layoutX="10.0" layoutY="125.0" prefHeight="200.0" prefWidth="214.0" visible="false">
+               <children>
+                  <ImageView fitHeight="146.0" fitWidth="200.0" layoutX="7.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../accest/240_F_168949261_g8a0pUo9DbKVfvrZO1xJNIBanOOIIido.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="riceContext" layoutX="10.0" layoutY="106.0" prefHeight="200.0" prefWidth="214.0" visible="false">
+               <children>
+                  <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="7.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../accest/240_F_274330841_QYvIHhxWKsrcTD72za4qIJ1aA5jEhcIy.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="258.0" layoutY="173.0" prefHeight="36.0" prefWidth="91.0" text="Name :-" textFill="#e49400">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="221.0" prefHeight="36.0" prefWidth="130.0" text="Description :-" textFill="#e49400">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="409.0" layoutY="385.0" mnemonicParsing="false" onAction="#OrderOnAction" prefHeight="37.0" prefWidth="151.0" style="-fx-background-color: #33393C; -fx-border-color: WHITE; -fx-background-radius: 20; -fx-border-radius: 20;" text="Order" textFill="#f78a00">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="254.0" layoutY="267.0" prefHeight="36.0" prefWidth="130.0" text=" Price  :-" textFill="#e49400">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblname" layoutX="374.0" layoutY="183.0" prefHeight="25.0" prefWidth="367.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbldescription" layoutX="378.0" layoutY="227.0" prefHeight="25.0" prefWidth="367.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblprice" layoutX="378.0" layoutY="272.0" prefHeight="25.0" prefWidth="367.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="663.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../accest/external-refresh-100-most-used-icons-flaticons-flat-flat-icons-2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="663.0" layoutY="11.0" mnemonicParsing="false" onAction="#refreshOnAction" opacity="0.0" prefHeight="36.0" prefWidth="36.0" text="refresh" />
+      <Separator layoutX="773.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="489.0" prefWidth="6.0" />
+      <TableView fx:id="tblMenu" layoutX="779.0" layoutY="-2.0" prefHeight="492.0" prefWidth="409.0">
+         <columns>
+            <TableColumn fx:id="colmId" prefWidth="121.0" text="Id" />
+            <TableColumn fx:id="colMname" prefWidth="140.0" text="Name" />
+            <TableColumn fx:id="colDescription" prefWidth="140.666748046875" text="Description" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
